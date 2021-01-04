@@ -1,5 +1,5 @@
 {
-  "name": "nodejs",
+  "name": "web2-nodejs",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hoonhur/node.js-practice.git"
+    "url": "git+https://github.com/web-n/Nodejs.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hoonhur/node.js-practice/issues"
+    "url": "https://github.com/web-n/Nodejs/issues"
   },
-  "homepage": "https://github.com/hoonhur/node.js-practice#readme",
+  "homepage": "https://github.com/web-n/Nodejs#readme",
   "dependencies": {
-    "sanitize-html": "^2.3.0"
+    "sanitize-html": "^1.18.2"
   }
 }
