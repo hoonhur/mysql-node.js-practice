@@ -1,11 +1,12 @@
-var http = require("http");
-var url = require("url");
+const http = require("http");
+const url = require("url");
 const topic = require("./lib/topic");
+const author = require("./lib/author");
 
-var app = http.createServer((req, res) => {
-  var _url = req.url;
-  var queryData = url.parse(_url, true).query;
-  var pathname = url.parse(_url, true).pathname;
+const app = http.createServer((req, res) => {
+  const _url = req.url;
+  const queryData = url.parse(_url, true).query;
+  const pathname = url.parse(_url, true).pathname;
   if (pathname === "/") {
     if (queryData.id === undefined) {
       topic.home(req, res);
@@ -22,6 +23,8 @@ var app = http.createServer((req, res) => {
     topic.update_process(req, res);
   } else if (pathname === "/delete_process") {
     topic.delete_process(req, res);
+  } else if (pathname === "/author") {
+    author.home(req, res);
   } else {
     res.writeHead(404);
     res.end("Not found");
