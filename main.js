@@ -25,6 +25,14 @@ const app = http.createServer((req, res) => {
     topic.delete_process(req, res);
   } else if (pathname === "/author") {
     author.home(req, res);
+  } else if (pathname === "/author/create_process") {
+    author.create_process(req, res);
+  } else if (pathname === "/author/update") {
+    author.update(req, res);
+  } else if (pathname === "/author/update_process") {
+    author.update_process(req, res);
+  } else if (pathname === "/author/delete_process") {
+    author.delete_process(req, res);
   } else {
     res.writeHead(404);
     res.end("Not found");
